@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrewAI Blog Writing Crew</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="badge">CREWAI PROJECT</div>
+    <h1>Blog Writing Crew</h1>
+    <p>Planner → Writer → Editor → Publication-ready Blog</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Generate a Blog</h2>
+      <form id="blogForm">
+        <label>Topic
+          <input id="topic" required value="Agentic AI">
+        </label>
+        <div class="grid">
+          <label>Audience
+            <input id="audience" value="AI engineers">
+          </label>
+          <label>Tone
+            <select id="tone">
+              <option>professional</option>
+              <option>educational</option>
+              <option>conversational</option>
+              <option>technical</option>
+            </select>
+          </label>
+        </div>
+        <label>Target words
+          <input id="targetWords" type="number" min="400" max="5000" value="1200">
+        </label>
+        <label>Keywords <span class="muted">(comma separated)</span>
+          <input id="keywords" placeholder="agentic AI, LLM agents, LangGraph">
+        </label>
+        <button type="submit" id="generateBtn">Generate with CrewAI</button>
+      </form>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section class="pipeline">
+      <div class="agent"><span>1</span><b>Planner</b><small>Outline + SEO</small></div>
+      <div class="arrow">→</div>
+      <div class="agent"><span>2</span><b>Writer</b><small>Draft content</small></div>
+      <div class="arrow">→</div>
+      <div class="agent"><span>3</span><b>Editor</b><small>Polish + SEO</small></div>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div class="result-head">
+        <div>
+          <span id="modeBadge" class="mode"></span>
+          <h2 id="title"></h2>
+          <p id="meta"></p>
+        </div>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-tab="final">Final Blog</button>
+        <button class="tab" data-tab="outline">Outline</button>
+        <button class="tab" data-tab="draft">Draft</button>
+        <button class="tab" data-tab="seo">SEO Keywords</button>
+      </div>
+      <article id="content"></article>
+    </section>
+  </main>
+
+  <footer>Multi-Agent Content Generation • CrewAI • FastAPI</footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
