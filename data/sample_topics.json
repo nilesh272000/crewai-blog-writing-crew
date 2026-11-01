@@ -1,0 +1,16 @@
+[
+  {
+    "topic": "Agentic AI",
+    "audience": "AI engineers",
+    "tone": "professional",
+    "target_words": 1200,
+    "keywords": ["agentic AI", "LLM agents", "AI agents", "LangGraph"]
+  },
+  {
+    "topic": "RAG architecture",
+    "audience": "GenAI developers",
+    "tone": "technical",
+    "target_words": 1500,
+    "keywords": ["RAG", "retrieval augmented generation", "vector database", "reranking"]
+  }
+]
